@@ -1,0 +1,46 @@
+/****************MISION 1***********************/
+#mission1{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+#punto-bueno-mision-1{
+	left: 193px;
+	top: 447px;
+}
+#punto-malo-mision-1{
+	left: 193px;
+	top: 595px;
+}
+
+#luz-buena-mision-1{
+	top: 451px;
+    left: 152px;
+}
+#luz-mala-mision-1{
+	top: 599px;
+    left: 152px;
+}
+
+#flecha-buena-mision-1,#flecha-mala-mision-1{
+	width: 45px;
+	height: 40px;
+	
+	transform-origin: 100% center;
+	-webkit-transform-origin: 100% center;
+	-o-transform-origin: 100% center;
+	background-image: url(../images/conductor/mision1/flecha-1.svg);
+
+	animation-name: flecha-animacion;
+	-webkit-animation-name: flecha-animacion;
+}
+#flecha-buena-mision-1{
+	top: 447px;
+	left: 138px;
+}
+#flecha-mala-mision-1{
+	top: 596px;
+	left: 138px;
+}

@@ -1,0 +1,313 @@
+@media (min-width: 768px){
+    body{
+        width: 768px;
+        height: 578px;
+    }
+    #container{
+        width: 768px;
+        height: 578px;
+    }
+
+    /*******JUEGO********/
+    .semaforo-start #semaforo-yellow{
+        animation-name: animacion-semaforo-yellow-1;
+        -webkit-animation-name: animacion-semaforo-yellow-1;
+    }
+
+    /********MASTER*******/
+    .mensaje-off{
+        visibility: hidden;
+        opacity: 0;
+        top: 50%;
+        box-shadow: none;
+
+        transition: visibility 0.2s, opacity 0.2s, top 0.2s, left 0.2s, box-shadow 0.2s;
+        -webkit-transition: visibility 0.2s, opacity 0.2s, top 0.2s, left 0.2s, box-shadow 0.2s;
+    }
+    .mensaje-on{
+        visibility: visible;
+        opacity: 1;
+        top: -10px;
+        box-shadow: 0px 4px 4px -5px rgba(0,0,0,0.5);
+
+        transition: visibility 0s, opacity 0.2s, top 0.2s, left 0.2s, box-shadow 0.2s;
+        -webkit-transition: visibility 0s, opacity 0.2s, top 0.2s, left 0.2s, box-shadow 0.2s;
+    }
+    .nubes{
+        animation-name: animacion-nubes;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        -webkit-animation-name: animacion-nubes;
+        -webkit-animation-duration: 20s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+    }
+    #music-btn:hover{
+        padding-top: 10px;
+        /*box-shadow: -1px 1px 2px 1px rgba(0,0,0,0.3);*/
+    }
+    
+    #keys-pad-cont{
+        width: 768px;
+    }
+
+    /*********MODAL**********/
+    #modal-button:hover{
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        background-color: #0097A3;
+    }
+    .modal-pregunta-option:hover{
+        cursor: pointer;
+        background-color: #78BE20;
+        color: #FFFFFF !important;
+        box-shadow: 0px 4px 3px -3px rgba(0,0,0,0.8);
+    }
+    .modal-pregunta-option:hover span{
+        color: #FFFFFF !important;
+    }
+    .modal-box-full{
+        width: 80% !important;
+    }
+
+    /********INSTRUCCIONES*******/
+    #instrucciones-next-btn:hover,
+    #instrucciones-prev-btn:hover{
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        box-shadow: -1px 1px 2px 1px rgba(0,0,0,0.5);
+    }
+}
+
+@media (min-width: 560px) and (max-width: 767px){
+    body{
+        width: 100%;
+        height: 578px;
+    }
+	#container{
+        width: 100%;
+        height: 578px;
+    }
+    .logo-sura{
+        margin-left: 10px;
+    }
+    .titulo{
+        margin-right: 10px;
+    }
+    .logo-arl{
+        margin-left: 10px;
+    }
+    #oficio-title{
+        margin-right: 10px;
+    }
+
+    #key-pad-left,
+    #key-pad-right,
+    #key-pad-up,
+    #key-pad-down{
+        transition: transform 0.1s, -webkit-transform 0.1s, -o-transform 0.1s;
+        -webkit-transition: transform 0.1s, -webkit-transform 0.1s, -o-transform 0.1s;
+    }
+
+    /*******JUEGO********/
+    .semaforo-start #semaforo-yellow{
+        animation-name: animacion-semaforo-yellow-1-responsive;
+        -webkit-animation-name: animacion-semaforo-yellow-1-responsive;
+    }
+
+    /********MASTER*******/
+    .mensaje-off{
+        visibility: hidden;
+        opacity: 0;
+        top: 50%;
+        box-shadow: none;
+
+        transition: visibility 0.2s, opacity 0.2s, top 0.2s, left 0.2s, box-shadow 0.2s;
+        -webkit-transition: visibility 0.2s, opacity 0.2s, top 0.2s, left 0.2s, box-shadow 0.2s;
+    }
+    .mensaje-on{
+        visibility: visible;
+        opacity: 1;
+        top: -10px;
+        box-shadow: 0px 4px 4px -5px rgba(0,0,0,0.5);
+
+        transition: visibility 0s, opacity 0.2s, top 0.2s, left 0.2s, box-shadow 0.2s;
+        -webkit-transition: visibility 0s, opacity 0.2s, top 0.2s, left 0.2s, box-shadow 0.2s;
+    }
+    .nubes{
+        animation-name: animacion-nubes;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        -webkit-animation-name: animacion-nubes;
+        -webkit-animation-duration: 20s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+    }
+    #music-btn:hover{
+        padding-top: 10px;
+        /*box-shadow: -1px 1px 2px 1px rgba(0,0,0,0.3);*/
+    }
+    
+    /************MODAL**************/
+    #modal-box{
+        width: 350px;
+        padding: 10px;
+    }
+    .modal-box-left{
+        left: -16%;
+    }
+    #modal-title{
+        font-size: 18px;
+    }
+    #modal-content > p,.modal-content-p{
+        font-size: 13px;
+    }
+    #modal-button:hover{
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        background-color: #0097A3;
+    }
+
+    .modal-pregunta-option:hover{
+        cursor: pointer;
+        background-color: #78BE20;
+        color: #FFFFFF !important;
+        box-shadow: 0px 4px 3px -3px rgba(0,0,0,0.8);
+    }
+    .modal-pregunta-option:hover span{
+        color: #FFFFFF !important;
+    }
+    .modal-box-full{
+        width: 90% !important;
+    }
+
+    /********INSTRUCCIONES*******/
+    #instrucciones-next-btn:hover,
+    #instrucciones-prev-btn:hover{
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        box-shadow: -1px 1px 2px 1px rgba(0,0,0,0.5);
+    }
+   
+}
+
+@media (min-width: 280px) and (max-width: 559px){
+    body{
+        width: 100%;
+        height: 578px;
+    }
+    #container{
+        width: 100%;
+        height: 578px;
+    }
+    .logo-sura{
+        margin-left: 10px;
+    }
+    .titulo{
+        margin-right: 10px;
+        width: 200px;
+        width: calc(100% - (73px + 30px));
+        width: -moz-calc(100% - (73px + 30px));
+    }
+    .logo-arl{
+        margin-left: 10px;
+    }
+    #oficio-title{
+        margin-right: 10px;
+    }
+
+    /******HOME*****/
+    #personaje-home{
+        display: none;
+    }
+
+    /*******JUEGO********/
+    #semaforo-mision-1{
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform-origin: center 0%;
+        -webkit-transform-origin: center 0%;
+        -o-transform-origin: center 0%;
+    }
+    .semaforo-start #semaforo-yellow{
+        animation-name: animacion-semaforo-yellow-1-responsive;
+        -webkit-animation-name: animacion-semaforo-yellow-1-responsive;
+    }
+    #vidas-cont{
+        height: 35px;
+        border-radius: 0px 0px 5px 5px;
+        box-shadow: -1px 1px 2px 1px rgba(0,0,0,0.5);
+        top: 0px;
+    }
+    #vidas-cont img{
+        width: 23px;
+        height: 30px;
+    }
+    #vidas-cont span,#vidas-txt{
+        font-size: 22px;
+    }
+
+    /*****MASTER***/
+    .mensaje-off{
+        visibility: hidden;
+        opacity: 0;
+        top: 50%;
+        box-shadow: none;
+    }
+    .mensaje-on{
+        visibility: visible;
+        opacity: 1;
+        top: -10px;
+    }
+    #mensaje p{
+        font-size: 13px;
+    }
+    .nubes{
+        animation: none;
+        animation: unset;
+        -webkit-animation: none;
+        -webkit-animation: unset;
+    }
+    #music-btn{
+        cursor: default;
+    }
+
+    /************ESCENARIO***********/
+
+    /************MODAL**************/
+    #modal-box{
+        width: 95%;
+        min-width: 320px;
+        padding: 10px;
+    }
+    .modal-box-left{
+        left: initial;
+    }
+    #modal-title{
+        font-size: 18px;
+    }
+    #instrucciones-wrapper{
+        height: 350px;
+    }
+    #modal-button{
+        cursor: default;
+    }
+    .modal-box-full{
+        width: 100% !important;
+        width: calc(100% - 20px) !important;
+        width: -moz-calc(100% - 20px) !important;
+    }
+
+    /******INSTRUCCIONES*****/
+    #instrucciones-next-btn,
+    #instrucciones-prev-btn{
+        cursor: default;
+    }
+}

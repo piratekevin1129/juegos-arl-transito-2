@@ -1,0 +1,176 @@
+/****************MISION 3***********************/
+#mission3{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+#luz-mision-3{
+    top: 235px;
+    left: 1239px;
+}
+
+#flecha-mision-3{
+    width: 40px;
+	height: 45px;
+	top: 216px;
+	left: 1236px;
+	transform-origin: center 100%;
+	-webkit-transform-origin: center 100%;
+    -o-transform-origin: center 100%;
+    background-image: url(../images/conductor/mision3/flecha-3.svg);
+
+	animation-name: flecha-animacion;
+	-webkit-animation-name: flecha-animacion;
+}
+.viejito-dead-3 #viejito-clip{
+    visibility: hidden;
+}
+.viejito-dead-3 #viejito-atropeyado{
+	visibility: inherit !important;
+	animation-name: animacion-atropeya-3;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: animacion-atropeya-3;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+}
+
+#viejito{
+    position: absolute;
+    width: 30px;
+	height: 28px;
+    /*box-shadow: 0px 0px 2px 1px rgba(0,0,0,1);*/
+}
+#viejito-clip{
+    position: absolute;
+    /*transition: transform 0.1s, -webkit-transform 0.1s, -o-transform 0.1s;
+    -webkit-transition: transform 0.1s, -webkit-transform 0.1s, -o-transform 0.1s;*/
+}
+#viejito-atropeyado{
+    visibility: hidden;
+    position: absolute;
+    width: 30px;
+    height: 28px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../images/avatar_atropeyado.png);
+}
+#viejito-mensaje{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    border-radius: 4px 4px 4px 4px;
+    background-color: #E3E829;
+    
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    -webkit-transform: translateX(-50%) translateY(-100%);
+    -o-transform: translateX(-50%) translateY(-100%);
+    z-index: 1000;
+    box-shadow: 0px 4px 4px -2px rgba(0,0,0,0.6);
+
+    padding: 7px;
+    box-sizing: border-box;
+}
+#viejito-mensaje::after{
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    left: 50%;
+    left: calc(50% - 7px);
+    left: -moz-calc(50% - 7px);
+    top: 100%;
+    border-left: 7px rgba(0,0,0,0) solid;
+    border-right: 7px rgba(0,0,0,0) solid;
+    border-top: #E3E829 solid 7px;
+}
+#viejito-mensaje p{
+    display: block;
+    position: relative;
+    width: 100%;
+    font-family: 'Barlow-Regular';
+    font-size: 14px;
+    color: #0033A0;
+    text-align: center;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0px;
+    padding: 0px;
+}
+@keyframes animacion-atropeya-3{
+    0%{
+        top: 0px;
+        left: 0px;
+        transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1);
+    }
+    50%{
+        top: -11px;
+        left: 11px;
+        transform: scale(1.8);
+		-webkit-transform: scale(1.8);
+		-o-transform: scale(1.8);
+    }
+    75%{
+        top: -15px;
+        left: 15px;
+        transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1);
+    }
+    90%{
+        top: -18px;
+        left: 18px;
+        transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		-o-transform: scale(1.2);
+    }
+    100%{
+        top: -20px;
+        left: 20px;
+        transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1);
+    }
+}
+
+.avatar-dead-3{
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+
+    transition: transform 0.3s ease-out;
+    -webkit-transition: transform 0.3s ease-out;
+}
+
+#punto-mision-3{
+	left: 1244px;
+	top: 260px;
+}
+
+#zebra-mision-3{
+	position: absolute;
+	left: 1089px;
+	top: 308px;
+	width: 39px;
+	height: 91px;
+	background-color: rgba(0,0,255,0);
+}
+
+#zona-mision-3{
+	position: absolute;
+	left: 1178px;
+	top: 308px;
+	width: 39px;
+	height: 91px;
+	background-color: rgba(0,0,255,0);
+}

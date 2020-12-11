@@ -1,0 +1,73 @@
+/****************MISION 4***********************/
+#mission4{
+	position: absolute;
+	top: 0px;
+    left: 0px;
+    display: none;
+}
+
+#carro1-m4,#carro2-m4,#carro3-m4,#carro4-m4{
+	position: absolute;
+	width: 49px;
+	height: 49px;
+	margin: 0px;
+	padding: 0px;
+	background-repeat: no-repeat;
+	background-size: contain;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+
+#carro1-m4{background-image: url(../images/conductor/mision4/carro1.png);}
+#carro2-m4{background-image: url(../images/conductor/mision4/carro2.png);}
+#carro3-m4{background-image: url(../images/conductor/mision4/carro3.png);}
+#carro4-m4{background-image: url(../images/conductor/mision4/carro4.png);}
+
+.carro-m4-chocado{
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+
+    transition: transform 0.3s ease-out;
+    -webkit-transition: transform 0.3s ease-out;
+}
+
+#luz-mision-4{
+    top: 574px;
+    left: 16px;
+}
+
+#flecha-mision-4{
+    width: 45px;
+	height: 40px;
+	top: 9px;
+	left: 549px;
+	transform-origin: 0% center;
+	-webkit-transform-origin: 0% center;
+    -o-transform-origin: 0% center;
+    background-image: url(../images/conductor/mision1/flecha-1.svg);
+
+	animation-name: flecha-animacion;
+	-webkit-animation-name: flecha-animacion;
+}
+
+.avatar-dead-4{
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+
+    transition: transform 0.3s ease-out;
+    -webkit-transition: transform 0.3s ease-out;
+}
+.avatar-dead-4 #avatar-clip{
+    visibility: hidden;
+}
+.avatar-dead-4 #avatar-atropeyado{
+    visibility: inherit !important;
+}
+
+#punto-mision-4{
+	left: 584px;
+	top: 22px;
+}

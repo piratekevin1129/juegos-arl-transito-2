@@ -1,0 +1,140 @@
+/**************MISIONES*************/
+
+#misiones{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.flecha{
+	position: absolute;
+	
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	
+	-webkit-animation-duration: 0.8s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+
+	filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.6));
+	-webkit-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.6));
+	-o-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.6));
+}
+
+@keyframes flecha-animacion{
+	0%{
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1);
+	}
+	40%{
+		transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		-o-transform: scale(1.2);
+	}
+	80%{
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1);
+	}
+	100%{
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1);
+	}
+}
+
+.icono-punto{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: rgba(255,0,0,0);
+}
+.icono-cono{
+	position: absolute;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url(../images/conos.svg);
+	width: 24px;
+	height: 26px;
+
+	filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.8));
+}
+
+.icono-luz{background-color: #FFFFFF;}
+.icono-luz{
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+    animation-name: animacion-light;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-name: animacion-light;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+@keyframes animacion-light{
+    0% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -o-transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        opacity: 0.75;
+    }
+    100% {
+        transform: scale(2.5);
+        -webkit-transform: scale(2.5);
+        -o-transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+#metro{
+	position: absolute;
+	width: 27px;
+	height: 333px;
+	left: 1326px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 0px;
+	background-image: url(../images/metro.png);
+}
+.metro-off{
+	top: -344px;
+}
+.metro-on{
+	animation-name: animacion-metro;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: animacion-metro;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+}
+@keyframes animacion-metro{
+	0%{
+		top: -344px;
+	}
+	40%{
+		top: 100%;
+	}
+	100%{
+		top: 100%;
+	}
+}

@@ -1,0 +1,98 @@
+#instrucciones-wrapper{
+	position: relative;
+	width: 100%;
+	height: 320px;
+	margin: 0px;
+	box-sizing: border-box;
+	padding: 0px;
+	overflow: hidden;
+}
+
+#instrucciones-next-btn,
+#instrucciones-prev-btn{
+    position: absolute;
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00AEC7;
+    box-sizing: content-box;
+
+    padding: 0px;
+    margin: 0px;
+
+    background-repeat: no-repeat;
+    background-position: center 100%;
+    background-position: center calc(100% - 7px);
+    background-position: center -moz-calc(100% - 7px);
+    background-size: 22px 22px;
+    cursor: pointer;
+
+    transition: box-shadow 0.3s, transform 0.3s, -webkit-transform 0.3s, -o-transform 0.3s, padding 0.3s;
+    -webkit-transition: box-shadow 0.3s, transform 0.3s, -webkit-transform 0.3s, -o-transform 0.3s, padding 0.3s;
+}
+
+#instrucciones-next-btn{
+	right: 10px;
+	bottom: 10px;
+	background-image: url(../images/right-icon-btn.svg);
+}
+#instrucciones-prev-btn{
+	left: 10px;
+	bottom: 10px;
+	background-image: url(../images/left-icon-btn.svg);
+}
+#instrucciones-wrap{
+	position: absolute;
+	width: 500%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	top: 0px;
+
+	transition: left 0.5s;
+	-webkit-transition: left 0.5s;
+}
+.instrucciones-wrap-left-1{left: 0%;}
+.instrucciones-wrap-left-2{left: -100%;}
+.instrucciones-wrap-left-3{left: -200%;}
+.instrucciones-wrap-left-4{left: -300%;}
+
+.instrucciones-wrap-page{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.instrucciones-img-cont{
+	position: relative;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	justify-content: center;
+}
+.instrucciones-img-cont img{
+	display: block;
+	margin: 0px auto;
+}
+	
+.instrucciones-img-cont img:first-child{
+	margin-bottom: 15px;
+	box-sizing: content-box;
+	border: #FFFFFF solid 5px;
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.3);
+}
+
+
+
+/**********************MODAL OFF*************************/
