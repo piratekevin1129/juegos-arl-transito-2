@@ -728,7 +728,7 @@ function setMission(repeat){
 			flecha.setAttribute('type','flecha')
 			piso.appendChild(flecha)
 			//piso_data.elementos.push(flecha)
-		}else{		
+		}else{
 			avatar_data.direccion = 'up'
 			avatar_data.rotacion = 180
 			
@@ -762,6 +762,108 @@ function setMission(repeat){
 			setModal({
 				close:false,
 				title:mision4.title,
+				content:html,
+				button:true,
+				value:'comenzar',
+				action:'startMission'
+			})
+		},50)
+	}
+
+	else if(m==5){
+		if(!repeat){
+			//temporal, descomentar para empezar en esta mision
+			/*avatar_data.direccion = 'left'
+			avatar_data.rotacion = 90
+			avatar_data.left = xMiddle()
+			avatar_data.top = mision5.init.y
+			piso_data.left = avatar_data.left-mision5.init.x
+			piso_data.top = 0
+			movex = 2
+			movey = 1
+			updateStatus()*/
+	
+			//poner elementos
+			//conos
+			for(i = 0;i<mision5.conos.length;i++){
+				var cono = document.createElement('div')
+				cono.className = 'icono-cono'
+				
+				cono.setAttribute('type','cono-m2')
+				cono.style.left = mision5.conos[i].x+'px'
+				cono.style.top = mision5.conos[i].y+'px'
+				piso_2.appendChild(cono)
+				piso_data.elementos.push(cono)
+			}
+	
+			//carros
+			for(i = 0;i<mision5.carros.length;i++){
+				var car = document.createElement('div')
+				car.className = 'carro-mision-5'
+				car.setAttribute('id',('carro'+mision5.carros[i].id+'-m5'))
+				car.setAttribute('type','carro-m5')
+				car.style.left = (mision5.carros[i].animation_data[0].x-(mision5.carros[i].size.w/2))+'px'
+				car.style.top = (mision5.carros[i].animation_data[0].y-(mision5.carros[i].size.h/2))+'px'
+				car.style.transform = 'rotate('+mision5.carros[i].animation_data[0].r+'deg)'
+				piso_2.appendChild(car)
+				piso_data.elementos.push(car)
+				mision5.carros[i].name = 'carro'+mision5.carros[i].id+'-m5'
+			}
+	
+			//ppunto final
+			var punto = document.createElement('div')
+			punto.className = 'icono-punto'
+			punto.setAttribute('id','punto-mision-5')
+			punto.setAttribute('type','punto')
+			piso.appendChild(punto)
+			piso_data.elementos.push(punto)
+	
+			var luz = document.createElement('div')
+			luz.className = 'icono-luz'
+			luz.setAttribute('id','luz-mision-5')
+			luz.setAttribute('type','luz')
+			piso.appendChild(luz)
+			//piso_data.elementos.push(luz)
+	
+			//flecha
+			var flecha = document.createElement('div')
+			flecha.className = 'flecha'
+			flecha.setAttribute('id','flecha-mision-5')
+			flecha.setAttribute('type','flecha')
+			piso.appendChild(flecha)
+			//piso_data.elementos.push(flecha)
+	
+		}else{
+			avatar_data.direccion = 'left'
+			avatar_data.rotacion = 90
+			avatar_data.left = xMiddle()
+			avatar_data.top = mision5.init.y
+			piso_data.left = avatar_data.left-mision5.init.x
+			piso_data.top = 0
+			movex = 2
+			movey = 1
+			updateStatus()
+	
+			//reubicar
+			for(i = 0;i<mision5.carros.length;i++){
+				var car = getE(mision5.carros[i].name)
+				car.style.left = (mision5.carros[i].animation_data[0].x-(mision5.carros[i].size.w/2))+'px'
+				car.style.top = (mision5.carros[i].animation_data[0].y-(mision5.carros[i].size.h/2))+'px'
+				car.style.transform = 'rotate('+mision5.carros[i].animation_data[0].r+'deg)'
+				car.className = 'carro-mision-5'//resetear clases
+				mision5.carros[i].frame = 0
+			}
+		}
+	
+		html = mision5.test
+	
+		animacion_mision = setTimeout(function(){
+			clearTimeout(animacion_mision)
+			animacion_mision = null
+	
+			setModal({
+				close:false,
+				title:mision5.title,
 				content:html,
 				button:true,
 				value:'comenzar',
@@ -828,19 +930,17 @@ function startMission(){
 		})
 	}else if(m==5){
 		unsetModal(function(){
-			//pregunta
-			var html = '<div class="modal-content-preguntas">'
-			html+='<section onclick="responderPregunta(1)" class="modal-pregunta-option"><span>a)</span> Cruzar tranquilamente ya que los conductores deben estar atentos a la situación.</section>'
-			html+='<section onclick="responderPregunta(2)" class="modal-pregunta-option"><span>b)</span> Reducir el volumen de la música y mirar hacia ambos lados antes de cruzar.</section>'
-			html+='<section onclick="responderPregunta(3)" class="modal-pregunta-option"><span>c)</span> Cruzar rápidamente esquivando los carros.</section>'
-			html+='</div>'
-			setModal({
-				close:false,
-				title:'Si estás escuchando música en tu celular y necesitas cruzar la calle. ¿Qué deberías hacer?',
-				content:html,
-				orientation:'full',
-				button:false
-			})
+			//emmpeezar animaciones
+			for(i = 0;i<mision5.carros.length;i++){
+				mision5.carros[i].startAnimation(i)
+			}
+
+			/*setMensaje({
+				content:'<p>Debo conducir con mucho cuidado.</p>',
+				delay:3000
+			})*/
+			addEvents()
+			setPitos()
 		})
 	}
 }
@@ -953,7 +1053,7 @@ function nextMission(){
 			mision5.cleanMision()
 		}
 		m++
-		if(m>4){
+		if(m>5){
 			getE('cargador').className = 'cargador-on'
 
 			animation_start = setTimeout(function(){
@@ -982,9 +1082,9 @@ function setPitos(){
 	if(m==2){
 		pitos = [pito1_mp3,pito_largo_mp3]
 	}else if(m==4){
-		pitos = [pito1_mp3,pito2_mp3,pito3_mp3,pito_largo_mp3,pito_camion_mp3]
+		pitos = [pito1_mp3,pito2_mp3,pito3_mp3,pito_largo_mp3]
 	}else if(m==5){
-		pitos = [pito1_mp3,pito2_mp3,pito3_mp3,pito_largo_mp3,pito_camion_mp3]
+		pitos = [pito1_mp3,pito2_mp3,pito3_mp3,pito_largo_mp3]
 	}
 
 	if(pitos.length>0){
@@ -1866,7 +1966,6 @@ function checkCollision(x,y,a,b){
 
 	return {collision:collision,stop:stop,params:params,type:type}
 }
-
 
 ////////////////////////////////////////////////////////////////
 

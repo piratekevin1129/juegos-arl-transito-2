@@ -43,9 +43,9 @@
 	top: 328px;
     left: 909px;
         
-	transform-origin: 100% center;
-	-webkit-transform-origin: 100% center;
-    -o-transform-origin: 100% center;
+	transform-origin: 0% center;
+	-webkit-transform-origin: 0% center;
+    -o-transform-origin: 0% center;
     background-image: url(../images/conductor/mision2/flecha-2.svg);
 
 	animation-name: flecha-animacion;

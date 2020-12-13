@@ -18,16 +18,15 @@
     box-sizing: border-box;
 }
 
-
 #carro1-m4{background-image: url(../images/conductor/mision4/carro1.png);}
 #carro2-m4{background-image: url(../images/conductor/mision4/carro2.png);}
 #carro3-m4{background-image: url(../images/conductor/mision4/carro3.png);}
 #carro4-m4{background-image: url(../images/conductor/mision4/carro4.png);}
 
 .carro-m4-chocado{
-    transform: rotate(-10deg);
-    -webkit-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg) !important;
+    -webkit-transform: rotate(-10deg) !important;
+    -o-transform: rotate(-10deg) !important;
 
     transition: transform 0.3s ease-out;
     -webkit-transition: transform 0.3s ease-out;
@@ -43,9 +42,9 @@
 	height: 40px;
 	top: 9px;
 	left: 549px;
-	transform-origin: 0% center;
-	-webkit-transform-origin: 0% center;
-    -o-transform-origin: 0% center;
+	transform-origin: 100% center;
+	-webkit-transform-origin: 100% center;
+    -o-transform-origin: 100% center;
     background-image: url(../images/conductor/mision1/flecha-1.svg);
 
 	animation-name: flecha-animacion;
