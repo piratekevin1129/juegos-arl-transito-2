@@ -326,14 +326,25 @@ function setMission(repeat){
 	if(m==1){
 		//cuadrar posiciones del escenario y del personaje
 
-		avatar_data.direccion = 'left'
-		avatar_data.rotacion = 90
-		avatar_data.left = xMiddle()
-		piso_data.left = avatar_data.left-mision1.init.x
-		piso_data.top = toBottom()
-		avatar_data.top = yPercent(mision1.init.y)
-		movex = 2
-		movey = getMoveY('bottom')
+		if(ismobile){
+			avatar_data.direccion = 'down'
+			avatar_data.rotacion = 0
+			avatar_data.left = xMiddle()
+			piso_data.left = avatar_data.left-mision1.init.xm
+			piso_data.top = toBottom()
+			avatar_data.top = yPercent(mision1.init.ym)
+			movex = 2
+			movey = getMoveY('bottom')
+		}else{
+			avatar_data.direccion = 'left'
+			avatar_data.rotacion = 90
+			avatar_data.left = xMiddle()
+			piso_data.left = avatar_data.left-mision1.init.x
+			piso_data.top = toBottom()
+			avatar_data.top = yPercent(mision1.init.y)
+			movex = 2
+			movey = getMoveY('bottom')
+		}
 
 		updateStatus()
 
@@ -1142,12 +1153,12 @@ var avatar_data = {
 	height:50,
 	area:8,//para las paredes
 	rotacion:0,
-	direccion:'left',
+	direccion:'down',
 	subarea:8,//para objetos en movimiento y conos
 	llaves:[],
 	premios:[]
 }
-updateRotationCar('+',90,'left')
+
 var avatar_speed = 0
 var avatar_aceleration = 0.2
 var top_speed = 3

@@ -1,6 +1,5 @@
 var mision1 = {
-	init:{x:430,y:624},
-	//init:{x:1042,y:504},
+	init:{x:430,y:624,xm:470,ym:570},
 	conos:[
 		{x:170,y:356},
 		{x:201,y:356},
@@ -9,7 +8,7 @@ var mision1 = {
 		{x:296,y:356},
 	],
 	title:'Prueba 1: Parqueando el auto',
-	test:String('<p>En esta prueba deberás ir al banco y estacionarte en la zona correcta.</p><br /><h6>Objetivos:</h6><p class="modal-content-list">Conduce con cuidado y evita conducir sobre las aceras.</p><p class="modal-content-list">Procura no equivocarte o perderás una oportunidad.<p>'),
+	test:String('<p>En esta prueba deberás ir al banco (donde indica la flecha) y estacionarte en la zona correcta.</p><br /><h6>Objetivos:</h6><p class="modal-content-list">Conduce con cuidado y evita conducir sobre las aceras.</p><p class="modal-content-list">Procura no equivocarte o perderás una oportunidad.<p>'),
 	carros:[],
 	animacion_espera:null,
 	fallarMision:function(){

@@ -24,6 +24,9 @@ function prepareWindow(){
         //game_scene.style.height = game_height+'px'
         //top_speed = 2
         avatar_aceleration = 2
+
+    }else{
+        updateRotationCar('+',90,'left')
     }
     if(isresponsive){
         
